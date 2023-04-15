@@ -7,7 +7,8 @@ export async function GET(request) {
 export async function POST(request) {
 
   try {
-    let data = await request.formData();
+//     let data = await request.formData();
+    return new Response(request.body)
   } catch (e) {
     console.log(e)
     return new Response("fail")
